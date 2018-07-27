@@ -1,0 +1,11 @@
+<div style="text-align:center">
+    <h1>
+      Welcome to {{ title }}!
+    </h1>
+    <h4>{{ subtitle }}</h4>
+    <ul>
+      <li *ngFor="let confrontation of confrontations"> 
+        {{ confrontation.local }} Vs {{ confrontation.visit }}
+      </li>
+    </ul>
+  </div>
