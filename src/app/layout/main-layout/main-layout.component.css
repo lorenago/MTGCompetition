@@ -1,0 +1,17 @@
+.main {
+    /* Variables */
+    --background: #222222;
+    --white: #ffffff;
+    --primary: #e94c13;
+    --secondary: #cacaca;
+    --error: #DC143C;
+    --warning: #FF8C00;
+
+    margin: 0;
+    height: 100vh;
+    width: 100%;
+    flex: 1;
+
+    background-color: var(--background);
+    color: var(--primary);
+}
