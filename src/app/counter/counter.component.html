@@ -1,3 +1,9 @@
 <div id="counter" class="flex">
-  Counter!!!!!
+  <div class="playerInfo flex" *ngFor="let player of players">
+    <i class="flex fas fa-caret-up" ></i>
+    <i class="flex fas fa-caret-up"></i>
+    <div class="flex life" [ngClass]="{'normal' : player.life >= 10, 'toDie': player.life < 10}">{{ player.life }}</div>
+    <i class="flex fas fa-caret-down"></i>
+    <i class="flex fas fa-caret-down"></i>
+  </div>  
 </div>

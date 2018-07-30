@@ -1,7 +1,8 @@
-<mat-toolbar color="primary">
-  <span class="toolbar-right"></span>
-  <div class="toolbar-icons-menu">
-    <i class="icon-arrow-down fa fa-sign-out-alt fa-lg" [routerLink]="['/main/counter']">Counter</i>
-    <i class="icon-arrow-up fa fa-sign-out-alt fa-lg" [routerLink]="['/main/tournament']">Tournament</i>
+<div class="toolbar">
+  <div class="tournament">
+    <i class="fab fa-elementor" [routerLink]="['/main/tournament']"> Tournament</i>
   </div>
-</mat-toolbar>
+  <div class="counter">
+    <i class="fas fa-gamepad"[routerLink]="['/main/counter']"> Counter</i>
+  </div>
+</div>

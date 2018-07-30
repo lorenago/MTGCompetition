@@ -7,6 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CounterComponent implements OnInit {
 
+  players = [
+    {
+      id: 1,
+      name: 'Lore',
+      life: 20
+    },
+    {
+      id: 2,
+      name: 'Alber',
+      life: 9
+    }
+  ]
   constructor() { }
 
   ngOnInit() {
