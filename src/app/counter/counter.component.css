@@ -17,8 +17,23 @@
     text-align: center;
 }
 
+#counter .playerInfo i {
+    cursor: pointer;
+}
+
+.life {
+    color: orange;
+}
+
 .life.toDie {
     color: yellow;
 }
+.life.died {
+    color: red;
+}
+.life.super {
+    color: green;
+}
+
 
 

@@ -19,6 +19,11 @@ export class CounterComponent implements OnInit {
       life: 9
     }
   ]
+
+  public updateLife(player, quantity): void {
+    player.life += Number(quantity);
+  }
+
   constructor() { }
 
   ngOnInit() {
