@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { CustomIconService } from '../services/custom-icon.service';
 
 @Component({
   selector: 'app-counter',
