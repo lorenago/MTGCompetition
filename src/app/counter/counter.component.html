@@ -1,9 +1,21 @@
 <div id="counter" class="flex">
   <div class="playerInfo flex" *ngFor="let player of players">
-    <i class="flex fas fa-caret-up" (click)="updateLife(player, 5)"></i>
-    <i class="flex fas fa-caret-up" (click)="updateLife(player, 1)"></i>
-    <div class="flex life" [ngClass]="{'super': player.life >= 20, 'normal': player.life >= 10, 'toDie': player.life < 10, 'died': player.life <= 0}">{{ player.life }}</div>
-    <i class="flex fas fa-caret-down" (click)="updateLife(player, -1)"></i>
-    <i class="flex fas fa-caret-down" (click)="updateLife(player, -5)"></i>
-  </div>  
+    <svg (click)="updateLife(player, 5)">
+      <polygon class="st0" points="96.6,0.1 1.1,21.7 192.1,21.7 " />
+    </svg>
+    <svg (click)="updateLife(player, 1)">
+      <polygon class="st0" points="96.6,0.1 1.1,21.7 192.1,21.7 " />
+    </svg>
+    <!-- <i class="flex fas fa-caret-up" (click)="updateLife(player, 5)"></i>
+    <i class="flex fas fa-caret-up" (click)="updateLife(player, 1)"></i> -->
+    <div class="flex life" [ngClass]="{'super': player.life >= 16, 'toDie': player.life > 5 && player.life <= 10, 'died': player.life <= 5}">{{ player.life }}</div>
+    <svg class="down" viewBox="0 -5 300 90" (click)="updateLife(player, -1)">
+      <polygon class="st0" points="96.6,0.1 1.1,21.7 192.1,21.7 " />
+    </svg>
+    <svg class="down" viewBox="0 -5 300 90" xml:space="preserve" (click)="updateLife(player, -5)">
+      <polygon class="st0" points="96.6,0.1 1.1,21.7 192.1,21.7 " />
+    </svg>
+    <!-- <i class="flex fas fa-caret-down" (click)="updateLife(player, -1)"></i>
+    <i class="flex fas fa-caret-down" (click)="updateLife(player, -5)"></i> -->
+  </div>
 </div>
