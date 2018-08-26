@@ -15,10 +15,35 @@
     flex-direction: column;
     font-size: 3em;
     text-align: center;
+    align-items: center;
+}
+
+#counter .playerInfo svg {
+    cursor: pointer;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    width: auto;
+    height: auto;
+}
+
+.life {
+    color: orange;
 }
 
 .life.toDie {
     color: yellow;
 }
+.life.died {
+    color: red;
+}
+.life.super {
+    color: green;
+}
 
+.down {
+    transform: rotate(180deg);
+}
 
