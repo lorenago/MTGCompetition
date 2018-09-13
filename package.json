@@ -10,7 +10,8 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "start-ionic": "ionic serve -l"
+    "start-ionic": "ionic serve -l",
+    "start android": "ionic cordova run android"
   },
   "private": true,
   "dependencies": {

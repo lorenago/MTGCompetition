@@ -1,7 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { HttpClientModule } from "@angular/common/http";
+import { HttpClientModule } from '@angular/common/http';
+import { IonicModule } from '@ionic/angular';
 
 import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
@@ -18,6 +19,7 @@ import { TournamentModule } from './tournament/tournament.module';
   imports: [
     HttpClientModule,
     BrowserModule,
+    IonicModule.forRoot(),
     CoreModule,
     SharedModule,
     RouterModule,
