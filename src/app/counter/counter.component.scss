@@ -1,53 +1,62 @@
-#counter {
-    display: flex;
-    flex: 1;
-    flex-direction: column;
-}
-
 :host {
     display: flex;
     flex: 1;
 }
 
-#counter {
-
-    .playerInfo {
+#counterPage {
     display: flex;
     flex: 1;
-    flex-direction: column;
-    font-size: 3em;
-    text-align: center;
-    align-items: center;
+    flex-direction: row;
+    
+    #lateralMenu {
+        width: 5em;
+        flex-direction: column;
+    }
+    #counterDetail {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+
+        .playerInfo {
+            display: flex;
+            flex: 1;
+            flex-direction: column;
+            font-size: 3em;
+            align-items: center;
+    
+            svg {
+                cursor: pointer;
+                display: flex;
+                flex: 1;
+                flex-direction: column;
+                text-align: center;
+                align-items: center;
+                width: auto;
+                height: auto;
+
+                &.down {
+                    transform: rotate(180deg);
+                }
+            }
+        }
     }
 }
 
 
-#counter .playerInfo svg {
-    cursor: pointer;
-    display: flex;
-    flex: 1;
-    flex-direction: column;
-    text-align: center;
-    align-items: center;
-    width: auto;
-    height: auto;
-}
 
 .life {
     color: orange;
+
+    &.toDie {
+        color: yellow;
+    }
+    &.died {
+        color: red;
+    }
+    &.super {
+        color: green;
+    }
 }
 
-.life.toDie {
-    color: yellow;
-}
-.life.died {
-    color: red;
-}
-.life.super {
-    color: green;
-}
 
-.down {
-    transform: rotate(180deg);
-}
 
