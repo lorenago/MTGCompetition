@@ -179,6 +179,9 @@
     },
     "@ionic/schematics-angular:page": {
       "styleext": "scss"
+    },
+    "@schematics/angular:component": {
+      "styleext": "scss"
     }
   }
 }

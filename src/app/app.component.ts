@@ -5,7 +5,7 @@ import { RestApiService } from './rest-api.service';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
   constructor (public api: RestApiService, public loadingController: LoadingController) {}
