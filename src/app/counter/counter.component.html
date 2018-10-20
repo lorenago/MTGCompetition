@@ -5,11 +5,11 @@
   </div>
   <div id="counterDetail">
     <div class="playerInfo flex" *ngFor="let player of players">
-      <ion-icon name="arrow-up" (click)="updateLife(player, 5)"></ion-icon>
-      <ion-icon name="arrow-up" (click)="updateLife(player, 1)"></ion-icon>
+      <mat-icon svgIcon="arrow-up" (click)="updateLife(player, 5)"></mat-icon>
+      <mat-icon svgIcon="arrow-up" (click)="updateLife(player, 1)"></mat-icon>
       <div class="flex life" [ngClass]="{'super': player.life >= 16, 'toDie': player.life > 5 && player.life <= 10, 'died': player.life <= 5}">{{ player.life }}</div>
-      <ion-icon name="arrow-down" (click)="updateLife(player, -1)"></ion-icon>
-      <ion-icon name="arrow-down" (click)="updateLife(player, -5)"></ion-icon>
+      <mat-icon svgIcon="arrow-down" (click)="updateLife(player, -1)"></mat-icon>      
+      <mat-icon svgIcon="arrow-down" (click)="updateLife(player, -5)"></mat-icon>
     </div>
   </div>
 </div>

@@ -5,6 +5,7 @@ import { CounterComponent } from './counter.component';
 import { SharedModule } from '../shared/shared.module';
 import { LayoutModule } from '../layout/layout.module';
 import { IonicModule } from '@ionic/angular';
+import { MatIconModule } from '@angular/material/icon';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { IonicModule } from '@ionic/angular';
     SharedModule,
     CounterRoutingModule,
     LayoutModule,
-    IonicModule
+    IonicModule,
+    MatIconModule
   ],
   declarations: [
     CounterComponent
