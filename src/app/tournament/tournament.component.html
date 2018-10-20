@@ -1,11 +1,38 @@
-<div style="text-align:center">
-    <h1>
-      Welcome to {{ title }}!
-    </h1>
+<div style="text-align:center;">
+  <h1>
+    {{ title }}
+  </h1>
+  <!-- Lista de enfrentamientos -->
+  <div *ngIf="!showForm">
+    <button mat-stroked-button (click)="showForm = !showForm">{{ newTournament}}</button>
     <h4>{{ subtitle }}</h4>
     <ul>
-      <li *ngFor="let confrontation of confrontations"> 
-        {{ confrontation.local }} Vs {{ confrontation.visit }}
+      <li *ngFor="let match of matchs"> 
+        {{ match.local }} Vs {{ match.visit }}
       </li>
     </ul>
   </div>
+
+  <!-- Formulario de creación de nuevo torneo -->
+  <div *ngIf="showForm">
+    <h4>Crear un nuevo torneo:</h4>
+    <p>Add new player:</p>
+    <form [formGroup]="newPlayerForm" (submit)="addNewPlayer()">
+      <mat-form-field>
+        <input matInput placeholder="Nombre o alias del jugador" formControlName="playerName">
+        <mat-error>Este campo es obligatorio</mat-error>
+        <button mat-button *ngIf="newPlayerForm.controls.playerName.value" matSuffix mat-icon-button aria-label="Add" (click)="addNewPlayer()">
+          <mat-icon>add</mat-icon>
+        </button>
+      </mat-form-field>
+      <button type="submit" [hidden]="true" class="btn btn-default" [disabled]="newPlayerForm.invalid">Submit</button>
+    </form>
+    <ul>
+      <li *ngFor="let player of players" class="newPlayerHeader"> 
+        {{ player.name }}
+        <mat-icon (click)="deletePlayer(player.id)">delete</mat-icon>
+      </li>
+    </ul>
+    <button mat-stroked-button (click)="matchMaker()" [disabled]="players.length > 2">Generar emparejamientos</button>
+  </div>
+</div>
